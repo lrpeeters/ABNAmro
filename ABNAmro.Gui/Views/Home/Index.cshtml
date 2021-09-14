@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome people of ABN Amro</h1>
+    <p>
+        This should be the calculator that you requested for. What it does, is it takes the first input and it calculates which percentage of the input's letters are in the second input. It does so
+        in several steps (depending on the length of the first input) and it stores the progress and result (so far) in the database. I decided to add new progress lines, so that a history is built up,
+        but just updating the progress line over and over again is of course also an option. Since this calculation is absolutely useless and a modern computer does this in less than no time, I added
+        a delay, so the flow mimics the task I was given. I hope you understand.
+    </p>
+    <p>
+        Having said that, I'm sorry to tell you that the frontend is not done, and neither are the unit tests. Unfortunately, I really don't have time to create more code to serve the frontend. However,
+        let me just tell you what I wanted to do, so that you may get an idea of how I work. First of all, I'm s backend developer, which is why the backend got a bit more attention. Having said that,
+        the frontend is equally importand, but I just ran out of time.
+    </p>
+    <p>
+        As you can see in my backend code, which by the way is fully functioning, I used the clean architecture. I wanted to do the same with the front end code. Maybe I could share some projects
+        (think of the Domain, CrossCutting and Application projects), but not sure (yet) if it totally matches. I don't think all will, but maybe with some tweaking...). The main difference is with the
+        persistence project, which communicates with the database for the backend, but for the frontend, that would be a layer that communicates with web api's: the ABNAmro.Api project.
+    </p>
+    <p>
+        Regarding running everything, just make sure the Api, Worker and Gui projects are your start up projects. And don't forget to create a database listening to ABNAmro and a user ABNAmroAdmin with
+        the password 'verybigsecret', which has sufficient read/write rights in the database. Yes, I could have created a script to do so and I believe that even EF Migrations could help out here, but it
+        wasn't on top of my priorities. Should you want to use a different database or with different users, no problem, but don't forget to change the connection strings in the Api and Worker projects.
+    </p>
+    <p>I hope that this will give you an idea of how I create my code.</p>
+</div>
